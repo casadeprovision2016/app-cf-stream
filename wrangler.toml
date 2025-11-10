@@ -1,0 +1,25 @@
+name = "app-cf-stream-worker"
+main = "worker/src/index.ts"
+compatibility_date = "2024-05-21"
+compatibility_flags = ["nodejs_compat"]
+
+[durable_objects]
+bindings = [
+  { name = "ROOM_COORDINATOR", class_name = "RoomCoordinator" }
+]
+
+[[migrations]]
+new_classes = ["RoomCoordinator"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "app_cf_stream"
+database_id = "00000000-0000-0000-0000-000000000000"
+
+[[r2_buckets]]
+binding = "RAW"
+bucket_name = "app-cf-stream-raw"
+
+[vars]
+AGGREGATE_WINDOW_MS = 1000
+MAX_BATCH_SIZE = 512

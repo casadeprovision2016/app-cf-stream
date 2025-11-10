@@ -1,0 +1,25 @@
+{
+  "name": "app-cf-stream-worker",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "vitest run",
+    "test:watch": "vitest watch --run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+  "itty-router": "^4.0.27",
+  "itty-router-extras": "^0.4.6",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240524.0",
+    "miniflare": "^3.20240524.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.2",
+    "wrangler": "^3.55.0"
+  }
+}

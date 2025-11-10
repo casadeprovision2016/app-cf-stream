@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "WebWorker"],
+    "module": "ESNext",
+    "moduleResolution": "node16",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "types": ["@cloudflare/workers-types", "vitest"],
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src", "tests"],
+  "exclude": ["node_modules"]
+}
